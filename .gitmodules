@@ -1,0 +1,6 @@
+[submodule "src/iogram"]
+	path = src/iogram
+	url = https://github.com/ghidra/IogramSource.git
+[submodule "src/framework"]
+	path = src/framework
+	url = https://github.com/ghidra/urho_framework.git
