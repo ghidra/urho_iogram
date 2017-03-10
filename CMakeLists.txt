@@ -23,9 +23,12 @@ include (UrhoCommon)
 # Define target name
 set (TARGET_NAME iogram)
 
+#c11
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
 # Define source files
 #define_source_files (GLOB_CPP_PATTERNS src/*.cpp src/*.cc GLOB_H_PATTERNS src/*.h)
-define_source_files (GLOB_CPP_PATTERNS src/framework/src/*.c* GLOB_H_PATTERNS src/framework/src/*.h* RECURSE GROUP )
+define_source_files (GLOB_CPP_PATTERNS src/framework/src/*.c* src/Main.cpp GLOB_H_PATTERNS src/framework/src/*.h* src/Main.h RECURSE GROUP )
 
 # Setup target with resource copying
 setup_main_executable ()
