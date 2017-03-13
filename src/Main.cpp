@@ -22,6 +22,14 @@
 
 #include "Main.h"
 
+#include "iogram/Core/IoGraph.h"
+#include "iogram/Core/IoSerialization.h"
+#include "iogram/Core/ComponentRegistration.h"
+#include "iogram/Components/RegisterCoreComponents.h"
+
+#include "iogram/Components/Scene_GetNode.h"
+
+
 #include <Urho3D/DebugNew.h>
 #include <Urho3D/IO/Log.h>
 #include <Urho3D/Engine/DebugHud.h>
@@ -31,6 +39,9 @@ URHO3D_DEFINE_APPLICATION_MAIN(Main)
 Main::Main(Context* context) :
     ApplicationHandler(context)
 {
+	cfgFileName_ = "iogram.cfg";
+
+	context->RegisterSubsystem(new IoGraph(context));
 }
 
 Main::~Main(){}
@@ -40,9 +51,22 @@ void Main::Start()
     // Execute base class startup
     ApplicationHandler::Start();
 
+    engineParameters_["FullScreen"]=true;
+
     //are we loading the editor?
-    scriptFileName_ = "/Scripts/Editor.as";//force the editor
+    scriptFileName_ = "/Scripts/CustomEditor.as";//force the editor
     bool scripted = LoadScriptFile();//load the script file (editor)
+
+    ///IoGraph->AddNewComponent(new Input_Panel
+    IoGraph* graph = GetSubsystem<IoGraph>();
+	graph->scene = scene_;
+	//solve it
+	
+	SharedPtr<IoComponentBase> nodePtr(new Scene_GetNode(GetContext()) );
+
+	graph->AddNewComponent(nodePtr);
+
+	graph->TopoSolveGraph();
 }
 
 
