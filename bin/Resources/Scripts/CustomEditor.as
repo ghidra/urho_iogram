@@ -12,7 +12,9 @@
 #include "Scripts/Editor/EditorPreferences.as"
 #include "Scripts/Editor/EditorToolBar.as"
 #include "Scripts/Editor/EditorSecondaryToolbar.as"
+
 #include "Scripts/Editor/EditorUI_Custom.as"
+
 #include "Scripts/Editor/EditorImport.as"
 #include "Scripts/Editor/EditorExport.as"
 #include "Scripts/Editor/EditorResourceBrowser.as"

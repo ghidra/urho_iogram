@@ -74,6 +74,7 @@ void CreateUI()
     ui.root.RemoveAllChildren();
 
     uiStyle = GetEditorUIXMLFile("UI/DefaultStyle.xml");
+    //uiStyle = GetEditorUIXMLFile("UI/IogramDefaultStyle.xml");
     ui.root.defaultStyle = uiStyle;
     iconStyle = GetEditorUIXMLFile("UI/EditorIcons.xml");
     

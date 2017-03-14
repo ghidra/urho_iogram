@@ -13,6 +13,8 @@
 #include <Urho3D/IO/FileSystem.h>
 #include <Urho3D/Core/CoreEvents.h>
 
+#include <Urho3D/UI/UI.h>
+
 #include <Urho3D/AngelScript/ScriptFile.h>
 #include <Urho3D/AngelScript/Script.h>
 #include <Urho3D/Core/Main.h>
@@ -51,6 +53,8 @@ void Main::Start()
     // Execute base class startup
     ApplicationHandler::Start();
 
+    ResourceCache* cache = GetSubsystem<ResourceCache>();
+
     engineParameters_["FullScreen"]=true;
 
     //are we loading the editor?
@@ -60,6 +64,11 @@ void Main::Start()
     ///IoGraph->AddNewComponent(new Input_Panel
     IoGraph* graph = GetSubsystem<IoGraph>();
 	graph->scene = scene_;
+
+	UI* ui = GetSubsystem<UI>();
+	XMLFile* style = cache->GetResource<XMLFile>("UI/IogramDefaultStyle.xml");
+	ui->GetRoot()->SetDefaultStyle(style);
+
 	//solve it
 	
 	SharedPtr<IoComponentBase> nodePtr(new Scene_GetNode(GetContext()) );
