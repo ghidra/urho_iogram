@@ -24,6 +24,8 @@
 
 #include "Main.h"
 
+#include "iogram/Urho3D/UI/IogramWindow.h"
+
 #include "iogram/Core/IoGraph.h"
 #include "iogram/Core/IoSerialization.h"
 #include "iogram/Core/ComponentRegistration.h"
@@ -44,6 +46,8 @@ Main::Main(Context* context) :
 	cfgFileName_ = "iogram.cfg";
 
 	context->RegisterSubsystem(new IoGraph(context));
+
+	IogramWindow::RegisterObject(context);
 }
 
 Main::~Main(){}
@@ -65,9 +69,9 @@ void Main::Start()
     IoGraph* graph = GetSubsystem<IoGraph>();
 	graph->scene = scene_;
 
-	UI* ui = GetSubsystem<UI>();
-	XMLFile* style = cache->GetResource<XMLFile>("UI/IogramDefaultStyle.xml");
-	ui->GetRoot()->SetDefaultStyle(style);
+	//UI* ui = GetSubsystem<UI>();
+	//XMLFile* style = cache->GetResource<XMLFile>("UI/IogramDefaultStyle.xml");
+	//ui->GetRoot()->SetDefaultStyle(style);
 
 	//solve it
 	

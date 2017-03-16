@@ -14,17 +14,18 @@ class IogramEditor
         if (window !is null)
             return;
 
+        //UI* ui = GetSubsystem<UI>();
+        //XMLFile* style = cache->GetResource<XMLFile>("UI/IogramDefaultStyle.xml");
+        //ui->GetRoot()->SetDefaultStyle(style);
+        //uiStyle = GetEditorUIXMLFile("UI/IogramDefaultStyle.xml");
+
         window = LoadEditorUI("UI/EditorIogramWindow.xml");
+        //window.defaultStyle = uiStyle;
         ui.root.AddChild(window);
         window.opacity = uiMaxOpacity;
 
-        BorderImage@ currentToolDesc = window.GetChild("CurrentToolDesc", true);
-        currentToolDesc.layoutBorder = IntRect(8, 8, 8, 8);
-
-        currentToolDescText = window.GetChild("CurrentToolDescText", true);
-
         window.height = 300;
-        window.SetPosition(ui.root.width - 40 - window.width, attributeInspectorWindow.position.y + attributeInspectorWindow.height + 40);
+        window.SetPosition(ui.root.width - 10 - window.width, attributeInspectorWindow.position.y + attributeInspectorWindow.height + 20);
 
         Show();
     }

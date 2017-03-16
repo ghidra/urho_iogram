@@ -103,6 +103,7 @@ void CreateUI()
     CreateColorWheel();
 
 	terrainEditor.Create();
+    terrainEditor.Hide();
 
     iogramEditor.Create();
 
