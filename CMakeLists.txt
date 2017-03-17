@@ -34,11 +34,11 @@ define_source_files (GLOB_CPP_PATTERNS src/framework/src/*.c* src/iogram/Urho3D/
 setup_main_executable ()
 
 add_subdirectory("src/iogram/Core")
-add_subdirectory("src/iogram/Geometry")
+#add_subdirectory("src/iogram/Geometry")
 add_subdirectory("src/iogram/Components")
 
 add_dependencies(${TARGET_NAME} Core)
-add_dependencies(${TARGET_NAME} Geometry)
+#add_dependencies(${TARGET_NAME} Geometry)
 add_dependencies(${TARGET_NAME} Components)
 
 #get rid of resource copying
@@ -48,9 +48,9 @@ add_definitions(-DNOMINMAX)
 
 #link the libs
 include_directories("src/iogram/Core")
-include_directories("src/iogram/Geometry")
+#include_directories("src/iogram/Geometry")
 include_directories("src/iogram/Components")
 
 target_link_libraries(${TARGET_NAME} Components)
 target_link_libraries(${TARGET_NAME} Core)
-target_link_libraries(${TARGET_NAME} Geometry)
+#target_link_libraries(${TARGET_NAME} Geometry)
