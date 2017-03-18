@@ -3,7 +3,7 @@
     <attribute name="Image Rect" value="48 0 64 16" />
     <attribute name="Border" value="4 4 4 4" />
 
-    <attribute name="Name" value="TerrainWindow" />
+    <attribute name="Name" value="IogramWindow" />
     <attribute name="Is Movable" value="true" />
     <attribute name="Is Resizable" value="true" />
     <attribute name="Resize Border" value="6 6 6 6" />
@@ -12,6 +12,8 @@
     <attribute name="Layout Border" value="6 6 6 6" />
     <attribute name="Min Size" value="800 400" />
     <attribute name="Max Size" value="2147483647 2147483647" />
+
+
 
     <!-- drag bar -->
     <element>
@@ -29,5 +31,25 @@
         </element>
     </element>
     <element type="BorderImage" style="EditorDivider" />
+
+    <!-- internal -->
+    <element>
+        <attribute name="Layout Mode" value="Horizontal" />
+        <attribute name="Min Size" value="800 400" />
+        <attribute name="Max Size" value="2147483647 2147483647" />
+        <element type="Window">
+            <attribute name="Name" value="NodeList" />
+            <attribute name="Min Size" value="200 400" />
+            <attribute name="Max Size" value="200 2147483647" />
+        </element>
+        <element type="Window">
+            <attribute name="Name" value="GraphArea" />
+            <attribute name="Position" value="204 0" />
+            <attribute name="Layout Mode" value="Horizontal" />
+            <attribute name="Layout Border" value="1 1 1 1" />
+            <attribute name="Min Size" value="596 400" />
+            <attribute name="Max Size" value="2147483647 2147483647" />
+        </element>
+    </element>
  
 </element>

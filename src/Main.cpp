@@ -59,6 +59,9 @@ void Main::Start()
 
     ResourceCache* cache = GetSubsystem<ResourceCache>();
 
+    //register core components
+	RegisterCoreComponents(context_);
+
     engineParameters_["FullScreen"]=true;
 
     //are we loading the editor?
