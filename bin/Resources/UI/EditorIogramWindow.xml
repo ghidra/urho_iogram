@@ -37,7 +37,7 @@
         <attribute name="Layout Mode" value="Horizontal" />
         <attribute name="Min Size" value="800 400" />
         <attribute name="Max Size" value="2147483647 2147483647" />
-        <element type="Window">
+        <element type="IogramNodeList">
             <attribute name="Name" value="NodeList" />
             <attribute name="Min Size" value="200 400" />
             <attribute name="Max Size" value="200 2147483647" />

@@ -25,6 +25,7 @@
 #include "Main.h"
 
 #include "iogram/Urho3D/UI/IogramWindow.h"
+#include "iogram/Urho3D/UI/IogramNodeList.h"
 
 #include "iogram/Core/IoGraph.h"
 #include "iogram/Core/IoSerialization.h"
@@ -48,6 +49,7 @@ Main::Main(Context* context) :
 	context->RegisterSubsystem(new IoGraph(context));
 
 	IogramWindow::RegisterObject(context);
+	IogramNodeList::RegisterObject(context);
 }
 
 Main::~Main(){}
