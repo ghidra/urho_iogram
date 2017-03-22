@@ -1,5 +1,14 @@
 <elements>
 
+    <!--My settings-->
+    <element type="IogramWindow" style="BorderImage">
+        <attribute name="Image Rect" value="48 0 64 16" />
+        <attribute name="Border" value="4 4 4 4" />
+    </element>
+    <element type="IogramNodeList" style="BorderImage">
+        <attribute name="Image Rect" value="48 0 64 16" />
+        <attribute name="Border" value="4 4 4 4" />
+    </element>
 	<!-- IOGRAM COLOURS
 	LIGHT_GREEN: <attribute name="Color" value="0.12 0.87 0.49 1.0"/>   
 

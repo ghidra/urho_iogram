@@ -1,7 +1,4 @@
-<element type="IogramWindow" style="BorderImage">
-    <!-- there are from the main window settings-->
-    <attribute name="Image Rect" value="48 0 64 16" />
-    <attribute name="Border" value="4 4 4 4" />
+<element type="IogramWindow">
 
     <attribute name="Name" value="IogramWindow" />
     <attribute name="Is Movable" value="true" />
@@ -32,15 +29,12 @@
     </element>
     <element type="BorderImage" style="EditorDivider" />
 
-    <!-- internal -->
+    <!-- internal 
     <element>
         <attribute name="Layout Mode" value="Horizontal" />
         <attribute name="Min Size" value="800 400" />
         <attribute name="Max Size" value="2147483647 2147483647" />
-        <element type="IogramNodeList" style="BorderImage">
-            <!-- there are from the main window settings-->
-            <attribute name="Image Rect" value="48 0 64 16" />
-            <attribute name="Border" value="4 4 4 4" />
+        <element type="IogramNodeList">
 
             <attribute name="Name" value="NodeList" />
             <attribute name="Min Size" value="200 400" />
@@ -54,6 +48,6 @@
             <attribute name="Min Size" value="596 400" />
             <attribute name="Max Size" value="2147483647 2147483647" />
         </element>
-    </element>
+    </element>-->
  
 </element>
