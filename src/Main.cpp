@@ -26,6 +26,7 @@
 
 #include "iogram/Urho3D/UI/IogramWindow.h"
 #include "iogram/Urho3D/UI/IogramNodeList.h"
+#include "iogram/Urho3D/UI/IogramNodeAddButton.h"
 
 #include "iogram/Core/IoGraph.h"
 #include "iogram/Core/IoSerialization.h"
@@ -50,6 +51,7 @@ Main::Main(Context* context) :
 
 	IogramWindow::RegisterObject(context);
 	IogramNodeList::RegisterObject(context);
+	IogramNodeAddButton::RegisterObject(context);
 }
 
 Main::~Main(){}
